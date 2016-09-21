@@ -94,7 +94,7 @@ generateTransitions = (corpus) ->
 
 sendGenericMarkov = (robot, msg) ->
   # Ensure there's a messageCache:
-  if robot.brain.data.markov === undefined
+  if robot.brain.data.markov is undefined
     robot.brain.data.markov = {messageCache: []}
   messageCache = robot.brain.data.markov.messageCache
   corpus = (message.said for message in messageCache)
@@ -178,7 +178,7 @@ module.exports = (robot) ->
     return if said.match(ASK_HUBOT_REGEX)
 
     # Ensure there's a messageCache:
-    if robot.brain.data.markov === undefined
+    if robot.brain.data.markov is undefined
       robot.brain.data.markov = {messageCache: []}
 
     # Store message in cache
