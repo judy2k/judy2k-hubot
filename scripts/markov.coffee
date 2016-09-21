@@ -2,7 +2,10 @@
 #   Generate chat messages using markov chains.
 #
 # Dependencies:
-#   None
+#   cheerio
+#   request
+#   twitter
+#   util
 #
 # Configuration:
 #   None
